@@ -1,0 +1,125 @@
+.order-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.order-form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 600px;
+  margin-bottom: 20px;
+  h2 {
+    text-align: center;
+  }
+  .input {
+    padding: 10px;
+    margin: 20px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px 0 rgb(0, 0, 0, 0.2);
+    outline: none;
+    color: dimgray;
+  }
+
+  .input:invalid {
+    animation: justshake 0.3s forwards;
+    color: red;
+  }
+
+  @keyframes justshake {
+    25% {
+      transform: translateX(5px);
+    }
+
+    50% {
+      transform: translateX(-5px);
+    }
+
+    75% {
+      transform: translateX(5px);
+    }
+
+    100% {
+      transform: translateX(-5px);
+    }
+  }
+
+  .first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+  }
+  .second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 20px;
+  }
+}
+
+.cart-summary {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+
+  .div-pizza {
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+.pizza-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.order-btn {
+  background-color: #FEBF00;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #FFD966;
+  }
+}

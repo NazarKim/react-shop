@@ -1,0 +1,61 @@
+body{
+  padding: 0;
+}
+.main{
+  margin-left: 20%;
+  .active{
+    color: #cccccc;
+  }
+  .div-price {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .price {
+      margin: 50px;
+      font-size: 33px;
+      text-decoration: none;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &.ch::before {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 8px solid red;
+        bottom: -10px;
+        width: 100px;
+      }
+
+      &.ex::after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 8px solid green;
+        top: -10px;
+        width: 100px;
+      }
+    }
+  }
+
+  .pizza-list{
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    padding: 16px;
+  }
+  .loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
